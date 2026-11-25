@@ -1,5 +1,6 @@
 import 'package:material_ui/material_ui.dart';
 import 'package:tarneeb/theme.dart';
+import 'package:tarneeb/widgets/drawer.dart';
 
 void main() {
   runApp(const MainApp());
@@ -27,10 +28,11 @@ class ScaffoldApp extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("تطبيق الطرنيب"),
-        leading: IconButton(icon: const Icon(Icons.menu), onPressed: () {}),
+        leading: DrawerButton(),
         backgroundColor: Theme.of(context).primaryColor,
       ),
       body: const Text("Hello world"),
+      drawer: AppDrawer(),
     );
   }
 }
